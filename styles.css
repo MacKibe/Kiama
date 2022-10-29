@@ -1,0 +1,61 @@
+/* styling for mobile phone screens 600px and below*/
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    background-color: #B79E9E;
+    scroll-behavior: smooth;
+}
+body {
+    text-align: center;
+    font-size: 350%;
+    max-width: 85%;
+    margin: auto;
+}
+
+h1, h2 {
+    margin: 0%;
+    padding: 4%;
+}
+
+h2 {
+    font-size: 100%;
+}
+
+h3 {
+    font-size: 100%;
+    margin: 4%;
+}
+
+.header {
+    padding: 50% 0;
+}
+
+.header p {
+    font-size: 70%;
+    color: white;
+}
+
+.header .whyUs {
+    margin-top: 15%;
+    font-size: 90%;
+}
+
+.whyUs, .schedule, .requirements, .location, .accounts, .contacts > span {
+    font-size: 80%;
+}
+
+.whyUs, .schedule, .requirements, .location, .payments {
+    padding: 15% 0;
+}
+
+.payments {
+    width: 100%;
+}
+
+.footer {
+    bottom: 0;
+}
+
+/* styling for larger screens */
