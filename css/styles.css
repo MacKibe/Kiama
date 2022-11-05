@@ -1,0 +1,126 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    background-image: url("../images/black.jpg") ;
+    background-color: rgb(218, 143, 143);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-position:center;
+    font-size: 120%;
+    /* overflow-x: hidden; */
+    color: rgb(253, 253, 253);
+    width: 100%;
+}
+
+.header {
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    /* padding: 5% 1%; */
+    font-size: 120%;
+    color: white;
+    font-weight: 900;
+}
+
+.mobile-nav-toggle{
+    display: none;
+}
+
+.primary-nav {
+    list-style: none;
+    margin: 0;
+    padding: 5%;
+    background-color: rgb(233, 183, 113);
+}
+
+.primary-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 90%;
+    font-weight: 700;
+}
+
+.body {
+    font-size: 150%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.body h2 {
+    text-align: center;
+    font-size: 100%;
+}
+
+hr {
+    margin: 2% 0;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 15%);
+}
+
+.payments {
+    display: flex;
+    justify-content: space-between;    
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    body {
+        font-size: 80%;
+    }
+    .logo {
+        font-size: 70%;
+    }
+    .header {
+        margin: 0%;
+        padding: 0%;
+    }
+    .payments{
+        display: block;
+    }
+    .payments h3 {
+        text-align: center;
+    }
+}
+@media (max-width: 768px){
+    .primary-nav {
+        --gap: 2rem;
+        z-index: 1000;
+        text-align: center;
+        position: fixed;
+        inset: 0 0 0 30%;
+        background-color: hsl(35 100% 90.2% / 0.86);
+        flex-direction: column;
+        padding: 15% 25%;
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .primary-nav [data-visible="true"] {
+        transform: translateX(0%);
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background-image: url("../icons/icon-hamburger.svg");
+        background-color: transparent;
+        width: 1.5rem;
+        border: 0;
+        aspect-ratio: 1;
+        background-repeat: no-repeat;
+        top: 3rem;
+        right: 2rem;
+    }
+
+    .mobile-nav-toggle[aria-expanded='true'] {
+        background-image: url("../icons/icon-close.svg");
+    }
+}
