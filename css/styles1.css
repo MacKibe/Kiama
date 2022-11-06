@@ -1,51 +1,96 @@
 * {
     margin: 0%;
-    padding:0%;
-}
-body {
-    background-image: url("../images/space.jpg") ;
-    background-color: #e9c094;
-    background-blend-mode: multiply;
-    background-attachment: fixed;
-    background-position: top;
-    overflow-x: hidden;
-    color: rgb(255, 255, 255);
-    font-size: 150%;
+    padding: 0%;
 }
 
-.logo {
-    margin: 4%;
+body {
+    background-image: url("../images/bground2.png") ;
+    background-attachment: fixed;
+    background-position:center;
+    font-size: 120%;
+    overflow-x: hidden;
+    color: #ffffe6;
+    width: 100%;
 }
 
 .header {
     align-items: center;
-    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    padding: 5%;
+    font-size: 120%;
+    color: white;
+    font-weight: 900;
+    float: left;
+}
+
+.mobile-nav-toggle{
+    display: none;
 }
 
 nav {
-    padding: 1% 2%;
-    background-color:#ff990036;
-    margin-right: 2%;
-}
+    width: 55%;
+ }
 
 .primary-nav {
     list-style: none;
+    margin: 0;
+    padding: 5%;
+    background-color: rgb(233, 183, 113);
 }
 
 .primary-nav a {
-    color: white;
     text-decoration: none;
+    color: black;
+    font-size: 90%;
+    font-weight: 700;
+}
+
+.body {
+    font-size: 150%;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.body h2 {
+    text-align: center;
+    font-size: 100%;
+}
+
+hr {
+    margin: 2% 0;
 }
 
 .flex {
     display: flex;
-    gap: var(--gap, 1rem);
+    gap: var(--gap, 15%);
 }
 
-.mobile-nav-toggle {
-    display: none;
+.payments {
+    display: flex;
+    justify-content: space-between;    
 }
 
+@media (min-width: 320px) and (max-width: 768px) {
+    body {
+        font-size: 80%;
+    }
+    .logo {
+        font-size: 70%;
+    }
+    .header {
+        margin: 0%;
+        padding: 0%;
+    }
+    .payments{
+        display: block;
+    }
+    .payments h3 {
+        text-align: center;
+    }
+}
 @media (max-width: 768px){
     .primary-nav {
         --gap: 2rem;
